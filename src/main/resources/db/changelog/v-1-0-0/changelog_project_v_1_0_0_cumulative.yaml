@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      validCheckSum: ANY
+      id: 20231705_initial_database_structure
+      author: a.ivashko
+      preConditions:
+        - on fail: HALT
+      changes:
+        - sqlFile:
+            dbms: h2
+            encoding: utf8
+            path: db/changelog/v-1-0-0/sql/V20231705_create_tables.sql
+        - sqlFile:
+            dbms: h2
+            encoding: utf8
+            path: db/changelog/v-1-0-0/sql/V20231705_create_relationships.sql
+
+      rollback:
+        - sqlFile:
+            dbms: h2
+            encoding: utf8
+            path: db/changelog/v-1-0-0/sql/V20231705_drop_relationships.sql
+        - sqlFile:
+            dbms: h2
+            encoding: utf8
+            path: db/changelog/v-1-0-0/sql/V20231705_drop_tables.sql

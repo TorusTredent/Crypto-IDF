@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      validCheckSum: ANY
+      id: 20231705_initial_database_structure
+      author: a.ivashko
+      preConditions:
+        - on fail: HALT
+      changes:
+        - sqlFile:
+            dbms: h2
+            encoding: utf8
+            path: db/changelog/v-1-0-1/sql/V20231705_insert_currencies.sql
