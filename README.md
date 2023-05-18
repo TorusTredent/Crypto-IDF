@@ -2,7 +2,7 @@
 
 Getting Started
 =====================
-##### 1. git clone 
+##### 1. git clone git@github.com:TorusTredent/Crypto-IDF.git
 ##### 2. start your application from your Idea
         ## Before start install Java https://www.java.com/
         ## Allow all installations suggested by IDE
